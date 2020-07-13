@@ -61,9 +61,11 @@ for Linux:
 `sudo apt install xscreensaver`. 
 
 The xscreensaver documentation by its author can be found here: 
+</pre>
 
 ![XScreensaver Manual](https://www.jwz.org/xscreensaver/man1.html) 
 
+<pre>
 Now, we can use Fractal Tubes: 
 
 1. To run as standalone application, simply type `m3d` after building it. 
@@ -84,8 +86,8 @@ and in "Command line" type
 in  place  of existing  screensaver (don't  worry,  the  old one  still  will be
 preserved). Then click OK to save and exit. Next time you open xscreensaver-demo
 `M3d` saver should be listed and you can make it your default screensaver. 
-
 </pre> 
+
 ![Xscreensaver preview screen](/preview.png)
 
 ![M3D settings screen within xscreensaver](/settings.png)
