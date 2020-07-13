@@ -420,12 +420,8 @@ void redrawMethod()
         core_cnt = m3d_pt_count / m3d_pt_cycle;
         
         sortByDistanceToEye (eye_x, eye_y, eye_z, corePoints, core_cnt);
-        
     }
-    
-    //  glEnable (GL_POLYGON_OFFSET_LINE);
-    //  glPolygonOffset (-1.f,-1.f);
-       
+           
     glBegin ( GL_QUADS ); 
     {
         for (int core = 0; core < core_cnt; core++)
@@ -553,19 +549,7 @@ void redrawMethod()
 
         glEnd();
     }
-    
-    if (!m_Preview)
-    {
-#ifdef USE_RUNTIME
-       /* int lx, ly, lz;
-        GetNextLightDir (lx, ly, lz, 0);
-        NSString *s = [NSString stringWithFormat:@"%d %d %d", lx, ly, lz];
-        [self outputText:8 y:4 r:.8f g:.8f b:.8f font:descrFont str:s fontSize:12];  */
-#else
-#endif
         
-    }
-    
     glFlush();
 }
 
@@ -611,11 +595,7 @@ void rollover()
     if (m_Preview) scale = 0.4;
     
     M3DDrawer *m3d = new M3DDrawer (300 * scale, 200 * scale);
-    
-  //  std::unique_ptr <int *> p;
-    
-  //  std::unique_ptr<M3DDrawer> m3d (m3d_raw);
-    
+        
     m3d->SetDefaultPrams ();
     
     bool altPalette = AppParams::isPaletteAlternative();
@@ -716,10 +696,6 @@ void rollover()
     rollover_time = time (NULL);
         
     grid_step = m3d_pt_cycle;
-
-    //char buffer[256];
-    //sprintf (buffer, "%d in cycle\n", m3d_pt_cycle);
-    //writeLog (buffer);
     
     if (USE_LIGHT)
     {
@@ -800,8 +776,6 @@ void CleanupAnimation()
 
 void selectNextImage()
 {
-#ifndef FREE_VERSION
-
     std::vector<int> indexes;
     
     for (int i=0; i < PRESET_COUNT; i++)
@@ -864,10 +838,6 @@ void selectNextImage()
             }
         }
     }
-    
-#else
-    current_set_index = 0;
-#endif
 
 }
 
@@ -883,14 +853,7 @@ void GetConfig (void)
     }
         
     corePoints = NULL;
-        
-#ifdef USE_RUNTIME
-        freeze = NO;
-      //  timerInterval = 1/10.0f;
-#else
-      //  timerInterval = 1/30.0f;
-#endif
-                        
+                                
     srand ((unsigned int)time(NULL));
         
     stdAlpha = AppParams::getTransparency();
