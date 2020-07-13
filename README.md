@@ -63,7 +63,7 @@ for Linux:
 The xscreensaver documentation by its author can be found here: 
 </pre>
 
-![XScreensaver Manual](https://www.jwz.org/xscreensaver/man1.html) 
+[XScreensaver Manual](https://www.jwz.org/xscreensaver/man1.html) 
 
 <pre>
 Now, we can use Fractal Tubes: 
