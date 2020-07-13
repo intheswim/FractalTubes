@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<screensaver name="Fractal Tubes" _label="Fractal Tubes" gl="yes">
+
+  <command arg="-root"/>
+
+  <boolean id="smooth" _label="Antialiasing On" arg-unset="-nosmooth"/>
+
+  <hgroup>
+    <vgroup>
+    
+    <number id="delay" type="slider" arg="-delay %"
+          _label="Frame rate" _low-label="Low" _high-label="High"
+          low="0" high="100" default="10"
+          convert="invert"/>
+
+    <number id="interval" type="slider" arg="-interval %"
+             _label="Timeout" _low-label="Short" _high-label="Long"
+             low="0" high="2" default="0" />
+
+    <number id="speed" type="slider" arg="-speed %"
+             _label="Rotation speed" _low-label="Slow" _high-label="Fast"
+             low="10" high="40" default="25" />
+
+    <boolean id="shuffle" _label="Shuffle images" arg-set="-shuffle"/>
+
+    </vgroup>
+    <vgroup>
+
+    <number id="detail" type="slider" arg="-detail %"
+             _label="Detail level" _low-label="Low" _high-label="High (slow)"
+             low="0" high="4" default="1" />
+
+
+    <number id="transparency" type="slider" arg="-transparency %"
+             _label="Transparency" _low-label="Low" _high-label="High"
+             low="0" high="10" default="1" />
+
+
+    <number id="dist_to_light" type="slider" arg="-dist_to_light %"
+            _label="Distance to light" _low-label="Near" _high-label="Far"
+             low="2" high="30" default="10" />
+
+    <boolean id="two_sided_light" _label="Two sided lighting" arg-unset="-onesided" />
+
+    </vgroup>
+  </hgroup>
+
+  <hgroup>
+
+    <select id="palette">
+            <option id="standard"    _label="Standard palette" arg-set="-palette std"/>
+            <option id="alternative"  _label="Alternative Palette" arg-set="-palette alr"/>
+            <option id="random"    _label="Random Palette"/>
+     </select>
+
+    <select id="light_source">
+            <option id="fixed"    _label="Fixed light source" arg-set="-light fixed"/>
+            <option id="moving"  _label="Moving light source" arg-set="-light moving"/>
+            <option id="random"    _label="Random light source"/>
+     </select>
+
+    <select id="gloss">
+            <option id="random"  _label="Random gloss" arg-set="-gloss random"/>
+            <option id="gloss0"  _label="Minimum gloss" />
+            <option id="gloss1"  _label="Gloss value 1" arg-set="-gloss 1"/>
+            <option id="gloss2"  _label="Gloss value 2" arg-set="-gloss 2"/>
+            <option id="gloss3"  _label="Gloss value 3" arg-set="-gloss 3"/>
+            <option id="gloss4"  _label="Gloss value 4" arg-set="-gloss 4"/>
+            <option id="gloss5"  _label="Gloss value 5" arg-set="-gloss 5"/>
+            <option id="gloss6"  _label="Gloss value 6" arg-set="-gloss 6"/>
+            <option id="gloss7"  _label="Gloss value 7" arg-set="-gloss 7"/>
+            <option id="gloss8"  _label="Gloss value 8" arg-set="-gloss 8"/>
+            <option id="gloss9"  _label="Gloss value 9" arg-set="-gloss 9"/>
+            <option id="glossA"  _label="Maximum gloss" arg-set="-gloss 10"/>
+     </select>
+
+
+  </hgroup>
+
+  <xscreensaver-updater />
+
+  <_description>
+
+Fractal Tubes : 3-D tubes painted with Mandelbrot Set &amp; Julia Set fractals.
+
+Written by Yuriy Yakimenko; 2015; Linux port 2020.
+
+  </_description>
+</screensaver>
